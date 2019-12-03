@@ -46,7 +46,7 @@ Deploy the Docker Flow Proxy (with letsencrypt) stack to start generating certif
 
     sudo docker stack deploy -c flow.yml proxy
 
-Deploy Portainer stack 
+Deploy Portainer stack:
 
     sudo docker stack deploy -c portainer-agent-stack.yml portainer
 
