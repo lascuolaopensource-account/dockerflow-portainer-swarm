@@ -5,7 +5,7 @@ Based on [Docker Flow Proxy](https://github.com/docker-flow/docker-flow-proxy.gi
 
 ## Setup
 ### Create the swarm
-This command will start the Swarm and join it as manager
+This command will start the Swarm and join it as manager:
 
     sudo docker swarm init
     
@@ -55,7 +55,7 @@ Deploy the Whoami test service:
     sudo docker stack deploy -c who.yml who
 
 ## Sbam
-You can now access portainer at :
+You can now access portainer at:
 https://portainer.lascuolaopensource.xyz:9000
 
 and Whoami:
