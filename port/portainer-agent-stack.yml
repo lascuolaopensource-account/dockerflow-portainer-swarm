@@ -15,9 +15,9 @@ services:
 
   portainer:
     image: portainer/portainer
-    command: -H tcp://tasks.agent:9001 --tlsskipverify --ssl --sslcert /certs/live/portainer.lascuolaopensource.xyz/cert.pem --sslkey /certs/live/portainer.lascuolaopensource.xyz/privkey.pem
+    command: -H tcp://tasks.agent:9001 --tlsskipverify --ssl --sslcert /certs/live/pad.lascuolaopensource.xyz/cert.pem --sslkey /certs/live/pad.lascuolaopensource.xyz/privkey.pem
     ports:
-      - "9000:9000"
+      - "1234:9000"
       - "8000:8000"
     volumes:
       - /etc/letsencrypt:/certs
@@ -34,11 +34,11 @@ services:
         - com.df.notify=true
         - com.df.distribute=true
         - com.df.serviceName=portainer
-        - com.df.serviceDomain=portainer.lascuolaopensource.xyz
+        - com.df.serviceDomain=pad.lascuolaopensource.xyz
         - com.df.servicePath=/
-        - com.df.Port=9000
-        - com.df.srcPort=443
-        - com.df.letsencrypt.host=portainer.lascuolaopensource.xyz
+        - com.df.httpsPort=1234
+        - com.df.srcHttpsPort=443
+        - com.df.letsencrypt.host=pad.lascuolaopensource.xyz
         - com.df.letsencrypt.email=info@lascuolaopensource.xyz
 networks:
   proxy:
